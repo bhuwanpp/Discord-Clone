@@ -7,7 +7,11 @@ export default {
   theme: {
     extend: {
       colors:{
-        'bgColor':'#5865f2'
+        'bgColor':'#404eed',
+
+      },
+      scale: {
+        '200': '2',
       }
     },
   },

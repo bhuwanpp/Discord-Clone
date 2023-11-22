@@ -3,13 +3,15 @@ import { Link } from "react-scroll";
 
 export default function RootLayout() {
   return (
-    <div className="root-layout h-1">
-      <header className="flex bg-bgColor">
-        <div className="logo flex ">
-        <i class="fa-brands fa-discord"></i>
-        <h5>Discord</h5>
+    <div className="root-layout">
+      <header className=" bg-bgColor flex  justify-between items-center h-20 px-10">
+
+        <div className="logo flex">
+        <i class="fa-brands fa-discord text-white text-2xl"></i>
+        <h5 className="text-white font-black text-xl">Discord</h5>
         </div>
-        <nav className="flex">
+
+        <nav className="flex justify-between gap-8 text-white font-semibold">
           <Link   smooth to="home" className="cursor-pointer">Download</Link>
         <Link  smooth to="about" className="cursor-pointer">Nitro</Link>
           <Link  smooth to="services" className="cursor-pointer">Discover</Link>
@@ -18,7 +20,11 @@ export default function RootLayout() {
           <Link  smooth to="services" className="cursor-pointer">Blog</Link>
           <Link  smooth to="services" className="cursor-pointer">Careers</Link>
         </nav>
-        <button className="rounded-full bg-white">Login</button>
+
+        <div className="button ">
+        <button className="rounded-full bg-white px-4 py-2 text-sm">Login</button>
+        </div>
+        
       </header>
       <main>
         <Outlet />
