@@ -8,6 +8,7 @@ export default {
     extend: {
       colors:{
         'bgColor':'#404eed',
+        'buttonColor':'#5865f2'
 
       },
       scale: {
