@@ -9,8 +9,10 @@ export default {
       colors:{
         'bgColor':'#404eed',
         'buttonColor':'#5865f2',
+        'buttonHover':'#6570eb',
         'textBold':'#23272a',
-        'thirdBg':'#f6f6f6'
+        'thirdBg':'#f6f6f6',
+        
 
       },
       scale: {

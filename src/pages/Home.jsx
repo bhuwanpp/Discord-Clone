@@ -1,4 +1,5 @@
-import BackToTop from "../components/BackToTop";
+
+import Footer from "../components/Footer";
 import Fifth from "./Fifth";
 import First from "./First";
 import Fourth from "./Fourth";
@@ -14,9 +15,8 @@ export default function Home() {
         <Third/>
         <Fourth/>
         <Fifth/>
-    </div>
-    <BackToTop/>
-       
+        <Footer/>
+    </div>       
     </>
   )
 }
