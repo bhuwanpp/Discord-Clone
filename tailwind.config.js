@@ -12,6 +12,9 @@ export default {
         'buttonHover':'#6570eb',
         'textBold':'#23272a',
         'thirdBg':'#f6f6f6',
+        'blackButton':'#23272a',
+        'hoverBlack':'#2c2f33'
+
         
 
       },
