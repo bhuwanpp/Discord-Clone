@@ -4,7 +4,7 @@ export default function First() {
   const rightImg = "./src/images/rightBg.svg";
   return (
     <div className="home h-[530px] bg-bgColor overflow-hidden" id="home">
-      <img src={cloud} alt="cloud" className=" relative h-[445px] scale-200" />
+      <img src={cloud} alt="cloud" className=" relative h-[800px] scale-200" />
       <div className="content absolute left-0 right-0  top-64  flex justify-between ">
         <div className="left  absolute -left-96">
           <img src={leftImg} alt="left image" className=" a" />

@@ -15,8 +15,7 @@ export default {
         'blackButton':'#23272a',
         'hoverBlack':'#2c2f33'
 
-        
-
+    
       },
       scale: {
         '200': '2',
