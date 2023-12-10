@@ -3,11 +3,11 @@ export default function First() {
   const cloud = "./src/images/cloud.svg";
   const rightImg = "./src/images/rightBg.svg";
   return (
-    <div className="home h-[530px] bg-bgColor overflow-hidden" id="home">
-      <img src={cloud} alt="cloud" className=" relative h-[800px] scale-200" />
+    <div className="home  h-[617px] bg-bgColor overflow-hidden" id="home">
+      <img src={cloud} alt="cloud" className=" relative h-[800px] scale-150" />
       <div className="content absolute left-0 right-0  top-64  flex justify-between ">
-        <div className="left  absolute -left-96">
-          <img src={leftImg} alt="left image" className=" a" />
+        <div className="left  absolute -left-96 ">
+          <img src={leftImg} alt="left image" className=" a pt-2" />
         </div>
         <div className="text absolute left-72 -top-20  w-[730px]">
           <h1 className="text-center text-6xl font-black text-white pb-10 w-ful">

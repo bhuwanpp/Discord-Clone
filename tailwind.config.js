@@ -13,12 +13,13 @@ export default {
         'textBold':'#23272a',
         'thirdBg':'#f6f6f6',
         'blackButton':'#23272a',
-        'hoverBlack':'#2c2f33'
+        'hoverBlack':'#2c2f33',
+        
 
     
       },
       scale: {
-        '200': '2',
+        '210': '',
       },
       fontWeight:{
         '1000':'1000'
