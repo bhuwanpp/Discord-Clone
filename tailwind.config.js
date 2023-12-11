@@ -19,7 +19,7 @@ export default {
     
       },
       scale: {
-        '210': '',
+        '175': '1.75',
       },
       fontWeight:{
         '1000':'1000'

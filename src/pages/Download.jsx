@@ -7,16 +7,23 @@ export default function Download() {
   const linux = "./src/images/downloadImage/linux.svg";
   const mac = "./src/images/downloadImage/mac.svg";
 
+  const [showLinux, setShowLinux] = useState(false);
+  const [showFeeling, setShowFeeling] = useState(false);
+
   const moreInfoRef = useRef(null);
 
-  const [button, showButton] = useState(false);
   const linuxClick = () => {
-    showButton(true);
+    setShowLinux(!showLinux);
+  };
+
+  const feelingClick = () => {
+    setShowFeeling(!showFeeling);
   };
 
   const handleClickOutside = (event) => {
     if (moreInfoRef.current && !moreInfoRef.current.contains(event.target)) {
-      showButton(false);
+      setShowFeeling(false);
+      setShowLinux(false);
     }
   };
   useEffect(() => {
@@ -75,7 +82,10 @@ export default function Download() {
           </div>
         </div>
         {/* linux */}
-        <div className="linux mt-6   h-[600px] w-[580px]  bg-thirdBg pt-12 text-center overflow-hidden rounded-xl">
+        <div
+          ref={moreInfoRef}
+          className="linux mt-6   h-[600px] w-[580px]  bg-thirdBg pt-12 text-center overflow-hidden rounded-xl"
+        >
           <h5 className="pb-4 text-3xl font-semibold">linux</h5>
           <button
             onClick={linuxClick}
@@ -84,7 +94,7 @@ export default function Download() {
             Download
             <i className="fa-solid fa-chevron-down pl-2"></i>
             {/* absolute */}
-            {button && (
+            {showLinux && (
               <div className="absolute left-0 top-16 bg-white h-28 w-44 text-start pl-5 pt-2 rounded-xl font-normal text-black">
                 <p className="pt-3">deb</p>
                 <p className="pt-2">tar.gz</p>
@@ -108,19 +118,22 @@ export default function Download() {
         </div>
         {/* feeling  */}
 
-        <div className="feeling mt-6 w-[580px] h-72     bg-thirdBg pt-12 px-8   rounded-xl">
+        <div
+          ref={moreInfoRef}
+          className="feeling mt-6 w-[580px] h-72     bg-thirdBg pt-12 px-8   rounded-xl"
+        >
           <h5 className="pb-4 text-3xl font-semibold">Feeling Experimental?</h5>
           <p className="pb-5 text-xl font-light">
             Try our Public Test Build and test new features before they launch.
           </p>
           <button
-            onClick={linuxClick}
+            onClick={feelingClick}
             className="bg-blackButton  hover:bg-hoverBlack relative  text-white text-xl font-semibold px-8 py-4 rounded-full hover:shadow-xl transition-all   "
           >
             Download Public Test Build
             <i className="fa-solid fa-chevron-down pl-2"></i>
             {/* absolute */}
-            {button && (
+            {showFeeling && (
               <div className="absolute left-0 top-16 bg-white h-52 w-96 text-start px-5 pt-2 rounded-xl font-normal text-black border z-20">
                 <div className="grid">
                   <a
