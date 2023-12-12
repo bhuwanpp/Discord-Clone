@@ -8,4 +8,10 @@
   body{
     overflow-x: hidden;
   }
+  .grid2{
+    background: linear-gradient(135deg, #8547c6 25%, #b845c1 62%, #ab5d8a 95%);
+  }
+  .grid1{
+    background: linear-gradient(225deg,#007cc2 20%,#5865f2);
+  }
 }

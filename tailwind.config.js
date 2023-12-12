@@ -14,6 +14,14 @@ export default {
         'thirdBg':'#f6f6f6',
         'blackButton':'#23272a',
         'hoverBlack':'#2c2f33',
+        // grid 
+        'grid1blue':'#007cc2',
+        'grid1indigo':'#5865f2',
+      
+        'grid2purple':'#8547c6',
+        'grid2pink':'#b845c1',
+        'grid2indigo':'#ab5d8a',
+
         
 
     

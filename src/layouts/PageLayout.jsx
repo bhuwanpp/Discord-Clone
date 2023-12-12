@@ -1,9 +1,10 @@
 import { Outlet, NavLink } from "react-router-dom";
+import Footer from "../components/Footer";
 
 export default function PageLayout() {
   return (
     <div className="page-layout ">
-      <header className=" z-10 bg-transparent absolute w-full flex justify-between items-center h-20 px-10">
+      <header className=" z-10 bg-transparent absolute w-full flex justify-between items-center h-20 px-16">
         <NavLink to="/" className="logo flex cursor-pointer  ">
           <i class="fa-brands fa-discord text-white text-2xl"></i>
           <h5 className="text-white font-black text-xl">Discord</h5>
@@ -45,6 +46,7 @@ export default function PageLayout() {
       <main>
         <Outlet />
       </main>
+      <Footer />
     </div>
   );
 }
