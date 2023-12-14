@@ -1,7 +1,17 @@
+import Perks from "../nitro/Perks";
+import Plan from "../nitro/Plan";
 import video from "../video/nitroVideo.webm";
 export default function Nitro() {
+  const imageNitroBasic =
+    "https://assets-global.website-files.com/6257adef93867e50d84d30e2/633c0934aea58b4ddee274ec_Layer%201.svg";
+  const imageNitro =
+    "https://assets-global.website-files.com/6257adef93867e50d84d30e2/633c093f866ccfba517ff0d4_Centered.svg";
+  const tick =
+    "https://assets-global.website-files.com/6257adef93867e50d84d30e2/633c0bef3ac44f5d1acbb35b_Vector.svg";
+  const cross =
+    "https://assets-global.website-files.com/6257adef93867e50d84d30e2/633ec9dcc1ea3b16de0da9dc_Small.svg";
   return (
-    <div className="nitro ">
+    <div className="nitro  ">
       <div className="top relative">
         <div className="video-container h-screen overflow-hidden relative px-16">
           <video
@@ -54,7 +64,7 @@ export default function Nitro() {
 
               <p>Special Nitro badge on your profile</p>
             </div>
-            <div className="button pt-28">
+            <div className=" pt-28">
               <button className="bg-white text-black w-full py-3 rounded-full text-xl font-semibold hover:shadow-xl hover:text-buttonColor transition-all">
                 Subscribe
               </button>
@@ -113,7 +123,7 @@ export default function Nitro() {
 
               <p>Special Nitro badge on your profile</p>
             </div>
-            <div className="button pt-1">
+            <div className=" pt-1">
               <button className="bg-white text-black w-full py-3 rounded-full text-xl font-semibold hover:shadow-xl hover:text-buttonColor transition-all">
                 Subscribe
               </button>
@@ -121,9 +131,33 @@ export default function Nitro() {
           </div>
         </div>
       </div>
-
-      <div className="bottom pt-96">
-        <h2>Popular Nitro Perks</h2>
+      {/* components */}
+      <Perks />
+      <div className="bottom px-16">
+        {/* plan */}
+        <div className="plan bg-thirdBg  px-16 h-screen">
+          {/* top */}
+          <div className="top flex justify-center text-center  text-5xl font-bold  w-full px-80 py-20">
+            <h2 className="text-textBold">
+              Pick the plan that works best for you
+            </h2>
+          </div>
+          <Plan
+            title="Features"
+            imageSrc1={imageNitroBasic}
+            imageSrc2={imageNitro}
+          />
+          <Plan
+            title="Unlimited Super Reactions"
+            imageSrc1={tick}
+            imageSrc2={tick}
+          />
+          <Plan
+            title="hello world"
+            subtitle1={"hello world"}
+            subtitle2={"hello world"}
+          />
+        </div>
       </div>
     </div>
   );
