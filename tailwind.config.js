@@ -22,6 +22,9 @@ export default {
         'grid2pink':'#b845c1',
         'grid2indigo':'#ab5d8a',
 
+        //nitro 
+        'nitroText':'#2E3338'
+
         
 
     

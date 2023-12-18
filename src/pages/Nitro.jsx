@@ -10,6 +10,8 @@ export default function Nitro() {
     "https://assets-global.website-files.com/6257adef93867e50d84d30e2/633c0bef3ac44f5d1acbb35b_Vector.svg";
   const cross =
     "https://assets-global.website-files.com/6257adef93867e50d84d30e2/633ec9dcc1ea3b16de0da9dc_Small.svg";
+  const popular =
+    "https://assets-global.website-files.com/6257adef93867e50d84d30e2/633c109da93ff46336b02e84_Tag.svg";
   return (
     <div className="nitro  ">
       <div className="top relative">
@@ -135,28 +137,42 @@ export default function Nitro() {
       <Perks />
       <div className="bottom px-16">
         {/* plan */}
-        <div className="plan bg-thirdBg  px-16 h-screen">
+        <div className="plan bg-thirdBg  px-16 h-screen relative">
           {/* top */}
-          <div className="top flex justify-center text-center  text-5xl font-bold  w-full px-80 py-20">
+          <div className="top flex justify-center text-center  text-5xl font-bold  w-full  px-52 py-20">
             <h2 className="text-textBold">
               Pick the plan that works best for you
             </h2>
           </div>
-          <Plan
-            title="Features"
-            imageSrc1={imageNitroBasic}
-            imageSrc2={imageNitro}
-          />
-          <Plan
-            title="Unlimited Super Reactions"
-            imageSrc1={tick}
-            imageSrc2={tick}
-          />
-          <Plan
-            title="hello world"
-            subtitle1={"hello world"}
-            subtitle2={"hello world"}
-          />
+          <div className="bottom relative">
+            <Plan
+              title="Features"
+              imageSrc1={imageNitroBasic}
+              imageSrc2={imageNitro}
+              customStyles={{
+                titleStyle: { fontWeight: "bold", fontSize: "20px" },
+                imgStyle: {
+                  paddingRight: "0px",
+                  paddingLeft: "0px",
+                },
+              }}
+            />
+            <img
+              src={popular}
+              alt=""
+              className="absolute right-16 -top-12 pr-2"
+            />
+            <Plan
+              title="Unlimited Super Reactions"
+              imageSrc1={tick}
+              imageSrc2={tick}
+            />
+            <Plan
+              title="hello world"
+              subtitle1={"hello world"}
+              subtitle2={"hello world"}
+            />
+          </div>
         </div>
       </div>
     </div>
