@@ -1,5 +1,6 @@
 import Perks from "../nitro/Perks";
 import Plan from "../nitro/Plan";
+import Questions from "../nitro/Questions";
 import video from "../video/nitroVideo.webm";
 export default function Nitro() {
   const imageNitroBasic =
@@ -135,9 +136,9 @@ export default function Nitro() {
       </div>
       {/* components */}
       <Perks />
-      <div className="bottom px-16">
+      <div className="bottom px-16 pb-10">
         {/* plan */}
-        <div className="plan bg-thirdBg  px-16 h-screen relative">
+        <div className="plan bg-thirdBg  px-16 pb-44 rounded-lg relative">
           {/* top */}
           <div className="top flex justify-center text-center  text-5xl font-bold  w-full  px-52 py-20">
             <h2 className="text-textBold">
@@ -160,7 +161,7 @@ export default function Nitro() {
             <img
               src={popular}
               alt=""
-              className="absolute right-16 -top-12 pr-2"
+              className="absolute right-7 -top-10 pr-2"
             />
             <Plan
               title="Unlimited Super Reactions"
@@ -168,13 +169,120 @@ export default function Nitro() {
               imageSrc2={tick}
             />
             <Plan
-              title="hello world"
-              subtitle1={"hello world"}
-              subtitle2={"hello world"}
+              title="Custom emoji anywhere and make them animated"
+              imageSrc1={tick}
+              imageSrc2={tick}
             />
+            <Plan
+              title="Custom stickers anywhere"
+              imageSrc1={tick}
+              imageSrc2={tick}
+            />
+            <Plan title="Custom App Icons" imageSrc1={tick} imageSrc2={tick} />
+            <Plan
+              title="Bigger file sharing"
+              subtitle1="50MB"
+              subtitle2="500MB"
+            />
+            <Plan
+              title="HD streaming"
+              imageSrc1={cross}
+              subtitle2="Up to 4K and 60fps"
+              customStyles={{
+                subtitleStyle: {
+                  fontSize: "15px",
+                  marginRight: "-45px",
+                },
+                imgStyle: {
+                  paddingRight: "35px",
+                },
+              }}
+            />
+            <Plan
+              title={
+                <>
+                  2 Free Boosts
+                  <br />+ 30% off extra Boosts
+                </>
+              }
+              imageSrc1={cross}
+              imageSrc2={tick}
+              customStyles={{
+                titleStyle: {
+                  marginTop: "-5px",
+                  marginBottom: "-5px",
+                  lineHeight: "1.2",
+                },
+              }}
+            />
+            <Plan
+              title="Animated avatar, banner, and profile theme"
+              imageSrc1={cross}
+              imageSrc2={tick}
+            />
+            <Plan
+              title="Early access to Clips"
+              imageSrc1={cross}
+              imageSrc2={tick}
+            />
+            <Plan
+              title="Custom server profiles"
+              imageSrc1={cross}
+              imageSrc2={tick}
+            />
+            <Plan
+              title="Nitro badge on your profile"
+              imageSrc1={tick}
+              imageSrc2={tick}
+            />
+            <Plan
+              title="Custom video backgrounds"
+              imageSrc1={tick}
+              imageSrc2={tick}
+            />
+            <Plan
+              title="Join up to 200 servers"
+              imageSrc1={cross}
+              imageSrc2={tick}
+            />
+            <Plan
+              title="Longer messages up to 4,000 characters"
+              imageSrc1={cross}
+              imageSrc2={tick}
+            />
+            <Plan
+              title="Colors for your Discord Theme"
+              imageSrc1={cross}
+              imageSrc2={tick}
+            />
+            <Plan
+              title="Custom sounds anywhere"
+              imageSrc1={cross}
+              imageSrc2={tick}
+            />{" "}
+            <Plan
+              title="Personalized entrance sounds"
+              imageSrc1={cross}
+              imageSrc2={tick}
+            />{" "}
+            <Plan
+              title="Shop member pricing and exclusive items"
+              imageSrc1={cross}
+              imageSrc2={tick}
+            />
+            <div className="buttons flex items-center gap-10 pt-8 absolute right-0">
+              <button className="rounded-full bg-buttonColor hover:opacity-70 text-white px-10 py-2 text-sm hover:drop-shadow-2xl transition-all font-bold">
+                <p> Subscribe Basic</p>
+              </button>
+              <button className="rounded-full bg-buttonColor hover:opacity-70 text-white px-10 py-2 text-sm hover:drop-shadow-2xl transition-all font-bold">
+                Subscribe Nitro
+              </button>
+            </div>
           </div>
         </div>
       </div>
+      {/* questions  */}
+      <Questions />
     </div>
   );
 }
