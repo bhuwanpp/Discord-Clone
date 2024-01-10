@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 
 export default function Questions() {
+  const [general, setGeneral] = useState(false);
+  const [payment, setPayment] = useState(false);
+
   const [showBox1, setShowBox1] = useState(false);
   const [showBox2, setShowBox2] = useState(false);
   const [showBox3, setShowBox3] = useState(false);
@@ -8,6 +11,16 @@ export default function Questions() {
   const [showBox5, setShowBox5] = useState(false);
 
   const moreInfoRef = useRef(null);
+
+  const handleGeneral = () => {
+    setGeneral(true);
+    setPayment(false);
+  };
+
+  const handlePayment = () => {
+    setPayment(true);
+    setGeneral(false);
+  };
 
   function showBox() {
     setShowBox1(!showBox1);
@@ -62,16 +75,31 @@ export default function Questions() {
   });
   return (
     <div className="questions">
-      <h2>Frequently Asked Questions</h2>
-      <div className="links">
-        <a className="cursor-pointer">General</a>
-        <a href="#">Payments</a>
+      <h2 className="text-center text-5xl font-bold text-textBold">
+        Frequently Asked Questions
+      </h2>
+      <div className="links flex gap-10 items-center justify-center pt-10">
+        <a
+          onClick={handleGeneral}
+          className={`cursor-pointer ${general ? "text-blue-500" : ""}`}
+        >
+          General
+        </a>
+        <a
+          onClick={handlePayment}
+          className={`${payment ? "text-blue-500" : ""} cursor-pointer`}
+        >
+          Payments
+        </a>
         <a href="#">Gifting and Promotions</a>
         <a href="#">Other</a>
       </div>
       <div ref={moreInfoRef} className="box">
         {/* box-1  */}
-        <div className="box1 cursor-pointer bg-blue-600" onClick={showBox}>
+        <div
+          className={`box1 cursor-pointer ${showBox1 ? "bg-blue-600" : ""} `}
+          onClick={showBox}
+        >
           <h5>What's a Nitro?</h5>
           <i
             className={`fa-solid fa-plus transition-all ${
@@ -90,7 +118,10 @@ export default function Questions() {
         </div>
 
         {/* box-2  */}
-        <div className="box2 cursor-pointer" onClick={showBoxTwo}>
+        <div
+          className={`box2 cursor-pointer ${showBox2 ? "bg-blue-600" : ""} `}
+          onClick={showBoxTwo}
+        >
           <h5>How does nitro work</h5>
           <i
             className={`fa-solid fa-plus transition-all ${
